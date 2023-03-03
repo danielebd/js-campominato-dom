@@ -46,7 +46,19 @@ inputButton.addEventListener('click', function () {
         range = 49;
         numberCell(range, 'cell-49');
     }
+    //GENERAZIONE NUMERI CASUALI INDENTIFICAZIONE BOMBA
+    let bombs = [];
+    while (bombs.length < 16) {
+        const randomBomb = Math.floor(Math.random() * range) + 1;
+        if(bombs.includes(randomBomb)) {}
+        else {
+            bombs.push(randomBomb);
+        }
+    }
+
 })
+
+
 
 
 
