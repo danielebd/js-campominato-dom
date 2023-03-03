@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+header, footer {
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    background-color: aquamarine;
+    flex-grow: 1;
+}
+
+/* header */
+/* nav left */
+
+.nav-left {
+    display: flex;
+}
+
+.logo {
+    max-width: 2.5rem;
+    margin-right: 1.25rem;
+}
+.logo img {
+    width: 100%;
+}
+h1 {
+    vertical-align: middle;
+}
+
+/* nav right */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+#challenge {
+    width: 200px;
+    border-radius: 5px;
+    background-color: rgb(221, 221, 221);
+    padding: 3px;
+    border: rgb(92, 92, 92) solid 1px;
+    margin-right: .3125rem;
+}
+#challenge option {
+    padding-top: 10px;
+}
+.play {
+    width: 80px;
+    border-radius: 5px;
+    background-color: rgb(221, 221, 221);
+    line-height: 23px;
+    border: rgb(92, 92, 92) solid 1px;
+}
+/* header */
+/* main */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.cell-100 {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cell-91 {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    border: solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cell-49 {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    border: solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cell-click {
+    background-color: rgb(0, 174, 255);
+    color: white;
+}
