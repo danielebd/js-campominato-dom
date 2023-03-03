@@ -19,15 +19,44 @@ function numberCell(numCell, nameClass) {
         myCreateElement('.container', 'div', nameClass, i);
     }
 
+    let bombs = [];
+    while (bombs.length < 16) {
+        const randomBomb = Math.floor(Math.random() * numCell) + 1;
+        if (bombs.includes(randomBomb)) { }
+        else {
+            bombs.push(randomBomb);
+        }
+    }
+
     let inputCell = document.querySelectorAll(`.${nameClass}`);
     inputCell.forEach(function (elem) {
         elem.addEventListener('click', function () {
-            elem.classList.add('cell-click');
-            console.log(elem.innerHTML)
+            console.log(bombs);
+            console.log(elem.innerHTML);
+            if (bombs.includes(parseInt(elem.innerHTML))) {
+                elem.classList.add('cell-click-bomb');
+                //let i = 0
+                // while (i < bombs.length){
+                //     if(bombs.includes(parseInt(inputCell.innerHTML))){
+                //         inputCell.classList.add('cell-click-bomb');
+                //         i++;
+                //     }
+                //     else {}
+                //
+                // }
+
+            }
+            else {
+                elem.classList.add('cell-click');
+                console.log(elem.innerHTML)
+            }
+            
+
         })
+
+
     })
 }
-
 const inputButton = document.querySelector('.play');
 inputButton.addEventListener('click', function () {
 
@@ -47,14 +76,6 @@ inputButton.addEventListener('click', function () {
         numberCell(range, 'cell-49');
     }
     //GENERAZIONE NUMERI CASUALI INDENTIFICAZIONE BOMBA
-    let bombs = [];
-    while (bombs.length < 16) {
-        const randomBomb = Math.floor(Math.random() * range) + 1;
-        if(bombs.includes(randomBomb)) {}
-        else {
-            bombs.push(randomBomb);
-        }
-    }
 
 })
 

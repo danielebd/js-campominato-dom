@@ -109,3 +109,7 @@ main {
     background-color: rgb(0, 174, 255);
     color: white;
 }
+.cell-click-bomb {
+    background-color: rgb(134, 0, 0);
+    color: white;
+}
